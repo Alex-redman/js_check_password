@@ -36,7 +36,7 @@ describe(`Function 'checkPassword':`, () => {
     expect(checkPassword('p@ssw0rd!')).toEqual(false);
   });
 
-  it(`should return false when password has no lowercase letter (function requires both upper and lower)`, () => {
+  it(`should return false when password has no lowercase letter`, () => {
     expect(checkPassword('P@SSW0RD!')).toEqual(false);
   });
 
@@ -64,7 +64,7 @@ describe(`Function 'checkPassword':`, () => {
     expect(checkPassword('Str@ng')).toEqual(false);
   });
 
-  it(`should return true when password contains non-Latin letters like ä (function does not block them)`, () => {
+  it(`should return true when password contains non-Latin (accented) letters like ä`, () => {
     expect(checkPassword('Pässw0rd!')).toEqual(true);
   });
 
